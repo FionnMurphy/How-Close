@@ -8,6 +8,9 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.io.IOException;
 
 public class AsteroidDeserializer extends StdDeserializer<Asteroid>{
+    public AsteroidDeserializer(){
+        this(null);
+    }
     public AsteroidDeserializer(Class<?> vc){
         super(vc);
     }

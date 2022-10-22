@@ -29,7 +29,8 @@ public class AsteroidDeserializer extends StdDeserializer<Asteroid>{
         String close_approach_date_full = close_approach_data.get("close_approach_date_full").asText();
         double kilometers_per_second = close_approach_data.get("relative_velocity").get("kilometers_per_second").asDouble();
         double miss_distance_lunar = close_approach_data.get("miss_distance").get("lunar").asDouble();
-
-        return new Asteroid( id, name, is_potentially_hazardous_asteroid, estimated_diameter_max, close_approach_date_full, kilometers_per_second, miss_distance_lunar);
+        Asteroid tmp = new Asteroid( id, name, is_potentially_hazardous_asteroid, estimated_diameter_max, close_approach_date_full, kilometers_per_second, miss_distance_lunar);
+        Asteroids.add(tmp);
+        return tmp;
     }
 }

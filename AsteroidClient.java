@@ -27,7 +27,7 @@ public class AsteroidClient {
 
         String json = this.client
                 .get()
-                .uri("/feed?start_date=" + date + "&end_date=" + date + "&api_key="+System.getenv("NASA_NEO_API_KEY"))
+                .uri("/feed?start_date=" + date + "&end_date=" + date + "&api_key=zKyPE2cQZEQzQ4W5Grxv4PJZVv4iE80gSMmA01qp")
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
                 .bodyToMono(String.class)
